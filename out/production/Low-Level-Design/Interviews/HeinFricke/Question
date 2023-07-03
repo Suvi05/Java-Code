@@ -1,0 +1,23 @@
+Covid Bed Management System
+
+Municipal corporation is going to manage covid hospitals in your city
+
+Municipal corporation can have one or more hospitals. They can add/edit/remove the covid hospital
+
+Each hospital has one or more beds
+
+Hospitals provide different types of bed - Normal, With Oxygen, With Ventilators
+
+Each bed can be allocated to one patient at a time
+
+You should be able to search for the bed in your nearby area by pin code
+
+Municipal corporation should be able to see the total patient admitted or discharged
+
+Deliverables
+
+· List of classes/objects that you see in the problem
+
+· Just include class declaration, member variables and method signatures (do not provide method implementation)
+
+· Types of relationships in these classes

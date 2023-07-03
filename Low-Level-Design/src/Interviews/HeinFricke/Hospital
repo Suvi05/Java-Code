@@ -1,0 +1,33 @@
+//It should have one or more bed
+
+class Hospital{
+    int pincode;
+
+    int numberOfBed;
+    Bed bed1= new Bed();
+
+    bed1.checkBedStatus();
+
+    if(numberOfBed<1){
+        //Throw error- Beds not available
+    }
+    else{
+        checkIfBedAvailable(){
+            allotmentOfBed(){
+                //Allotment of Different type of Bed
+                if(danger=="low") return NORMAL_BED;
+                else if(danger=="med") return OXYGEN_BED;
+                else if(danger=="high") return VENTILATOR_BED;
+
+                numberOfBed--;
+            }
+        }
+    }
+    admitedToHospital(){
+        paitent++;
+    }
+    dischargedToHospital(){
+        paitent--;
+    }
+
+}

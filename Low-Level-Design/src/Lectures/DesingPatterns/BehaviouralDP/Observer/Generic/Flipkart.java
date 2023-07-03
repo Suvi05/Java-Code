@@ -1,0 +1,58 @@
+package Lectures.DesingPatterns.BehaviouralDP.Observer.Generic;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+//Producer Class
+public class Flipkart {
+
+    //Event-1
+    //From some API: /placeOrder?={}
+    public void placeOrder(Order order) {  //This is an interesting event, to which other Classes want to know
+        this.notify(Events.ORDER_PLACED, order);
+        //And notify(Events.ORDER_PLACED,order); both are same
+    }
+
+    //Event-2
+    public void cancelOrder(Order order) {  //This is an interesting event, to which other Classes want to know
+        this.notify(Events.ORDER_CANCELLED, order);
+    }
+
+    //This will store the "Subscriber" for that particular "Events"
+    private static Map<Events, List<Subscriber>> subscribers = new HashMap<>();
+
+    //Flipkart will have some methods to take care of its Subscribers
+    public static void registerSubscriber(Events events, Subscriber subscriber) {
+        //It means Subscriber want to register for this Event
+
+        //Below code : If any event is not present then put that event as KEY and put an empty array so that we can add subscribers later.
+        //         Key        Value
+        //    ORDER_PLACED     [].add()
+
+        if (!subscribers.containsKey(events)) {
+            subscribers.put(events, new ArrayList<>());
+        }
+
+        //If we already have that list then we will add new subscriber to it:
+        //Means this "subscriber" is interested in this "events"
+        subscribers.get(events).add(subscriber);
+    }
+
+    //You can also create one UNSUBSCRIBE Method
+    public static void unregister(Events events, Subscriber subscriber) {
+        subscribers.remove(events).remove(subscriber);
+    }
+
+    //This will be called whenever this event will occur and this will notify all the subscriber of this event.
+    public void notify(Events events, Order order) {
+        for (Subscriber subscriber : subscribers.get(events)) {
+            subscriber.listen(events, order); //This method is in Subscriber Interface
+        }
+    }
+}
+
+//So, Producer will have 2 methods:
+//1- So that people can subscribe to you -registerSubscriber()
+//2- So that you can Notify the people who has subscribed -notify()

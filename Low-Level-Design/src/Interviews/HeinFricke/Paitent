@@ -1,0 +1,13 @@
+class Paitent{
+    int patientNumber;
+    String disease;
+
+    if(disease=="RiskyCovid"){
+        //admit to hospital
+        //allocate Bed
+    }
+    else{
+        //Give medicine and ask for rest at home
+    }
+
+}
