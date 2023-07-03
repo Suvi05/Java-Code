@@ -13,7 +13,6 @@ public class GelPen extends Pen implements RefillPen {
     private GelPen(WriteBehaviour writeBehaviour) {
         super(PenType.GEL, writeBehaviour);
     }
-
 //    private GelPen() {
 //        super(PenType.GEL);
 //    }
