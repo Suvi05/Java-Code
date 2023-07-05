@@ -2,6 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Low-Level-Design/src/LLDProjects/PenDesign_Naman" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Low-Level-Design/src/LLDProjects/TicTacToeDesign" vcs="Git" />
   </component>
 </project>

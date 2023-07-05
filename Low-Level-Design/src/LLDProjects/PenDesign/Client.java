@@ -8,8 +8,7 @@ import java.util.List;
 public class Client {
     public static void main(String[] args) {
         List<Pen> pens = new ArrayList<>();
-
-        for (Pen pen : pens) {
+     for (Pen pen : pens) {
             if (pen.getType().equals(PenType.GEL)) {
                 //Then do this
                 //Instead of writing - if(pen instanceOf GelPen) thing
