@@ -13,10 +13,10 @@ public class Student {
     }
 
     void pauseCourse() {
-        this.state = "Paused";
+        this.state = "PAUSED";
     }
 
-    void Student() { //Method having same name as of Class.
+    void student() { //Method having same name as of Class.
         System.out.println("This Works");
     }
 }
