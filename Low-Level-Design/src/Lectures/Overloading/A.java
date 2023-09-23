@@ -13,7 +13,7 @@ public class A {
     public void print(String name) {
         System.out.println("Hello " + name);
     }
-
+//We can not have 2 methods with only difference in their return types.
 //    public String print(String name) {
 //        System.out.println("Hello from String return type");
 //    }
