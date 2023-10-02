@@ -7,7 +7,7 @@ public class UserExam {
     private int scienceMarks;
     private String name;
 
-    public UserExam(Parameter p) {
+    public UserExam(Parameter p) { //Constructor of User Exam
         if (p.mathsMarks > 100 || p.scienceMarks > 100) {//Validation
             System.out.println("Marks can't be greater than 100");
             throw new InvalidParameterException("Marks can't be greater than 100");

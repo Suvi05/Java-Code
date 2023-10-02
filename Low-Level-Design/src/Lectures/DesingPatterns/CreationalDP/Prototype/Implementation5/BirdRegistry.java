@@ -19,6 +19,4 @@ public class BirdRegistry {
 /*Benefit of Having Bird registry is :
  * I can store different type of birds here, for example there is a sparrow in the future,
  * longlegsparrow
- *
- *
  * */

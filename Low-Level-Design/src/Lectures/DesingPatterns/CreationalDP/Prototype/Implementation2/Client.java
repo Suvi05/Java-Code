@@ -6,6 +6,7 @@ import java.util.List;
 public class Client {
     public static void main(String[] args) {
         List<Bird> birds = List.of(
+                new Bird(),
                 new Crow(),
                 new Sparrow(),
                 new Crow()

@@ -9,5 +9,7 @@ public abstract class Theme {
 
     //Factory Of Factories
     public abstract ThemeComponentFactory createComponentFactory();
-
+    //This one is factory method in main class to give the corresponding object of Abstract Factory Class
 }
+
+//Factory is preventing us from calling the Constructor Directly

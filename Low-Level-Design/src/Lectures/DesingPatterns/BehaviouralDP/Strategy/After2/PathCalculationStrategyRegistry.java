@@ -4,13 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PathCalculationStrategyRegistry {
-    private Map<TransportMode, PathCalculationStrategy> stratergies = new HashMap<>();
+    private Map<TransportMode, PathCalculationStrategy> strategies = new HashMap<>();
 
-    public void register(TransportMode mode, PathCalculationStrategy stratergy) {
-        stratergies.put(mode, stratergy);
+    public void register(TransportMode mode, PathCalculationStrategy strategy) {
+        strategies.put(mode, strategy);
     }
 
     public PathCalculationStrategy get(TransportMode mode) {
-        return stratergies.get(mode);
+        return strategies.get(mode);
     }
 }

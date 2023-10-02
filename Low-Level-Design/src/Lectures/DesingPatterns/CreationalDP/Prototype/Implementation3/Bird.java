@@ -15,7 +15,6 @@ public class Bird implements Cloneable<Bird> {
         this.weight = old.weight;
     }
 
-
     @Override
     public Bird clone() { //Clone() which is just calling the Copy Constructor
         return new Bird(this);

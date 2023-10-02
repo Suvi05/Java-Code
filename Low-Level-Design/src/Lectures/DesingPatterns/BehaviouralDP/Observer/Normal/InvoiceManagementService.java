@@ -5,9 +5,10 @@ package Lectures.DesingPatterns.BehaviouralDP.Observer.Normal;
 public class InvoiceManagementService implements Subscriber {
 
     //Registering Observer as a Subscriber
-    InvoiceManagementService() {
+    InvoiceManagementService() { //Constructor
         Flipkart.registerSubscriber(Events.ORDER_PLACED, this);
         //this -> because it is himself a subscriber.
+        //Registering Subscriber in Constructor b/c IMS will always be interested in ORDER_PLACED Event
     }
 
     //This method will call Generate Invoice Method
