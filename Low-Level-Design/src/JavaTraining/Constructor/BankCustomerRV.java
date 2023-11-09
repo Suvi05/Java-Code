@@ -11,6 +11,7 @@ public class BankCustomerRV {
     public static void main(String[] args) {
         BankCustomerRV c1 = new BankCustomerRV();
         BankCustomerRV c2 = new BankCustomerRV();
+        System.out.println("Done");
         //Object Reference -c1
         //Keyword to create Object -new
         //BankCustomer() -> Constructor  ->Initialize

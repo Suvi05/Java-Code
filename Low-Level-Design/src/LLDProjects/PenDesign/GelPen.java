@@ -20,16 +20,19 @@ public class GelPen extends Pen implements RefillPen {
         private Refill refill;
         private boolean canChangeRefill = false;
 
+        //Return type will be Builder
         public Builder setRefill(Refill refill) {
             this.refill = refill;
             return this;
         }
 
+        //Return type will be Builder
         public Builder setCanChangeRefill(boolean value) {
             this.canChangeRefill = value;
             return this;
         }
 
+        //Creation of New Object + Object Copying(Validation is not done here)
         public GelPen build() {
             GelPen gelPen = new GelPen(new SmoothWriteBehaviour());
             gelPen.refill = this.refill;

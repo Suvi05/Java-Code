@@ -16,5 +16,6 @@ public class BankCustomerM {
         BankCustomerM c2=new BankCustomerM();
         c2.name="Sid";
         c2.adhar=2345;
+        System.out.println("Done");
     }
 }
