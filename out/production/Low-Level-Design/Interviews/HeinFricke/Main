@@ -1,0 +1,9 @@
+class Main(){
+    public static void main(SA[]){
+        int pincode;
+        sout("Enter pin code");
+        //scanner will take the input
+
+        String hospitalAvailable = searchHospital(pincode);
+        }
+}

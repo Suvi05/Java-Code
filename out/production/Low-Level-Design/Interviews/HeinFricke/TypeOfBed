@@ -1,0 +1,5 @@
+Enum Beds{
+    NORMAL_BED;
+    OXYGEN_BED;
+    VENTILATOR_BED;
+}

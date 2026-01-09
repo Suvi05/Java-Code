@@ -1,0 +1,263 @@
+Covid Bed Management System
+
+Municipal corporation is going to manage covid hospitals in your city
+
+Municipal corporation can have one or more hospitals. They can add/edit/remove the covid hospital
+
+Each hospital has one or more beds
+
+Hospitals provide different types of bed - Normal, With Oxygen, With Ventilators
+
+Each bed can be allocated to one patient at a time
+
+You should be able to search for the bed in your nearby area by pin code
+
+Municipal corporation should be able to see the total patient admitted or discharged
+
+Deliverables
+
+· List of classes/objects that you see in the problem
+
+· Just include class declaration, member variables and method signatures (do not provide method implementation)
+
+· Types of relationships in these classes
+
+//Chat GPT
+
+Based on the given requirements, here's an outline of the classes/objects and their relationships for the Covid Bed Management System:
+
+1. Class: MunicipalCorporation
+   - Member Variables:
+     - hospitals: List<Hospital>
+
+2. Class: Hospital
+   - Member Variables:
+     - name: String
+     - address: String
+     - beds: List<Bed>
+   - Methods:
+     - addBed(Bed bed): void
+     - removeBed(Bed bed): void
+     - getAvailableBeds(): List<Bed>
+     - searchBedsByPinCode(String pinCode): List<Bed>
+
+3. Class: Bed
+   - Member Variables:
+     - type: BedType
+     - patient: Patient (can be null if the bed is unoccupied)
+   - Methods:
+     - allocateToPatient(Patient patient): void
+     - deallocate(): void
+
+4. Class: Patient
+   - Member Variables:
+     - name: String
+     - age: int
+     - contactNumber: String
+     - bed: Bed (null if the patient is not allocated a bed)
+
+5. Enum: BedType
+   - NORMAL
+   - WITH_OXYGEN
+   - WITH_VENTILATOR
+
+Relationships:
+
+- MunicipalCorporation has one or more Hospital objects.
+- Hospital has one or more Bed objects.
+- Bed is associated with one Patient at a time.
+- Patient is associated with one Bed (if allocated).
+
+Please note that the method implementations and additional details can be added based on specific requirements and design considerations.
+
+//Code by ChatGPT
+Certainly! Here's an example implementation of the Covid Bed Management System in Java:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+class MunicipalCorporation {
+    private List<Hospital> hospitals;
+
+    public MunicipalCorporation() {
+        this.hospitals = new ArrayList<>();
+    }
+
+    public void addHospital(Hospital hospital) {
+        hospitals.add(hospital);
+    }
+
+    public void removeHospital(Hospital hospital) {
+        hospitals.remove(hospital);
+    }
+
+    public int getTotalAdmittedPatients() {
+        int totalPatients = 0;
+        for (Hospital hospital : hospitals) {
+            totalPatients += hospital.getAdmittedPatients();
+        }
+        return totalPatients;
+    }
+
+    public int getTotalDischargedPatients() {
+        int totalPatients = 0;
+        for (Hospital hospital : hospitals) {
+            totalPatients += hospital.getDischargedPatients();
+        }
+        return totalPatients;
+    }
+}
+
+class Hospital {
+    private String name;
+    private String address;
+    private List<Bed> beds;
+
+    public Hospital(String name, String address) {
+        this.name = name;
+        this.address = address;
+        this.beds = new ArrayList<>();
+    }
+
+    public void addBed(Bed bed) {
+        beds.add(bed);
+    }
+
+    public void removeBed(Bed bed) {
+        beds.remove(bed);
+    }
+
+    public List<Bed> getAvailableBeds() {
+        List<Bed> availableBeds = new ArrayList<>();
+        for (Bed bed : beds) {
+            if (!bed.isOccupied()) {
+                availableBeds.add(bed);
+            }
+        }
+        return availableBeds;
+    }
+
+    public List<Bed> searchBedsByPinCode(String pinCode) {
+        List<Bed> bedsByPinCode = new ArrayList<>();
+        for (Bed bed : beds) {
+            if (bed.getPinCode().equals(pinCode)) {
+                bedsByPinCode.add(bed);
+            }
+        }
+        return bedsByPinCode;
+    }
+
+    public int getAdmittedPatients() {
+        int admittedPatients = 0;
+        for (Bed bed : beds) {
+            if (bed.isOccupied()) {
+                admittedPatients++;
+            }
+        }
+        return admittedPatients;
+    }
+
+    public int getDischargedPatients() {
+        int dischargedPatients = 0;
+        for (Bed bed : beds) {
+            if (!bed.isOccupied()) {
+                dischargedPatients++;
+            }
+        }
+        return dischargedPatients;
+    }
+}
+
+class Bed {
+    private BedType type;
+    private Patient patient;
+    private String pinCode;
+
+    public Bed(BedType type, String pinCode) {
+        this.type = type;
+        this.patient = null;
+        this.pinCode = pinCode;
+    }
+
+    public boolean isOccupied() {
+        return patient != null;
+    }
+
+    public void allocateToPatient(Patient patient) {
+        this.patient = patient;
+    }
+
+    public void deallocate() {
+        this.patient = null;
+    }
+
+    public String getPinCode() {
+        return pinCode;
+    }
+}
+
+class Patient {
+    private String name;
+    private int age;
+    private String contactNumber;
+    private Bed allocatedBed;
+
+    public Patient(String name, int age, String contactNumber) {
+        this.name = name;
+        this.age = age;
+        this.contactNumber = contactNumber;
+        this.allocatedBed = null;
+    }
+
+    public Bed getAllocatedBed() {
+        return allocatedBed;
+    }
+
+    public void setAllocatedBed(Bed bed) {
+        this.allocatedBed = bed;
+    }
+}
+
+enum BedType {
+    NORMAL,
+    WITH_OXYGEN,
+    WITH_VENTILATOR
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MunicipalCorporation municipalCorporation = new MunicipalCorporation();
+
+        Hospital hospital1 = new Hospital("City Hospital", "123 Street, City");
+        Hospital hospital2 = new Hospital("Central Hospital", "456 Avenue, Town");
+
+        municipalCorporation.addHospital(hospital1);
+        municipalCorporation.addHospital(hospital2);
+
+        Bed bed1 = new Bed(BedType.NORMAL, "123456");
+        Bed bed2 = new Bed(BedType.WITH_OXYGEN, "654321");
+        Bed bed3 = new Bed(BedType.WITH_VENTILATOR, "789012");
+
+        hospital1.addBed(bed1);
+        hospital1.addBed(bed2);
+        hospital2.addBed(bed3);
+
+        Patient patient1 = new Patient("John", 45, "9876543210");
+        Patient patient2 = new Patient("Emma", 30, "8765432109");
+
+        bed1.allocateToPatient(patient1);
+        bed3.allocateToPatient(patient2);
+
+        System.out.println("Total Admitted Patients: " + municipalCorporation.getTotalAdmittedPatients());
+        System.out.println("Total Discharged Patients: " +
+
+municipalCorporation.getTotalDischargedPatients());
+    }
+}
+```
+
+This is a basic implementation of the Covid Bed Management System in Java. It includes the classes `MunicipalCorporation`, `Hospital`, `Bed`, `Patient`, and the enum `BedType`.
+The relationships between these classes are established through composition and associations.
+
+Please note that this is a simplified example, and additional features and functionalities can be added based on the specific requirements of the system.
