@@ -2,9 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Low-Level-Design/src/LLDProjects/LLD-cab-booking-ola-uber" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Low-Level-Design/src/LLDProjects/ParkingLotDesign" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Low-Level-Design/src/LLDProjects/SnakesAndLaddersDesign" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Low-Level-Design/src/LLDProjects/TicTacToeDesign" vcs="Git" />
   </component>
 </project>
