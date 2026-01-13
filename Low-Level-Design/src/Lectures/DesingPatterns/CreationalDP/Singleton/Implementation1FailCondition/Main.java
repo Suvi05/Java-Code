@@ -13,6 +13,7 @@ public class Main {
         public void run() {
             Database database = Database.getInstance("Thread 1");
             System.out.println(database.val);
+            System.out.println(database.hashCode());
         }
     }
     static class Thread2 implements Runnable {
@@ -20,6 +21,7 @@ public class Main {
         public void run() {
             Database database = Database.getInstance("Thread 2");
             System.out.println(database.val);
+            System.out.println(database.hashCode());
         }
     }
 }

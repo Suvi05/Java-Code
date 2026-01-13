@@ -49,8 +49,9 @@ public class UserExam {
         public void setName(String name) {
             this.name = name;
         }
-        //
 
+
+        //Best time to validate the parameters is to just before creating new Object.
         public UserExam build() {
 
             //Step 1: Validation
