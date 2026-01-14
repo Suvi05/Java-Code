@@ -7,4 +7,10 @@ public class SalaryDetails {
     private double basepay;
     private double hra;
     private double lta;
+
+    SalaryDetails(double basepay, double hra, double lta) {
+        this.basepay = basepay;
+        this.hra = hra;
+        this.lta = lta;
+    }
 }
