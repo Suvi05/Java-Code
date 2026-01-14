@@ -6,12 +6,9 @@ import Lectures.DesingPatterns.CreationalDP.Factory.SimpleFactory.Tax.TaxRegime;
 //This class is only having 1 responsibility - Choose the correct Regime
 public class TaxCalculatorFactory {
     public static TaxAlgorithm getTaxAlgorithm(TaxRegime taxRegime) {
-        switch (taxRegime) {
-            case OLD:
-                return new OldTaxAlgorithm();
-            case NEW:
-                return new NewTaxAlgorithm();
-        }
-        throw new RuntimeException("Exception Occurred" + taxRegime);
+        return switch (taxRegime) {
+            case OLD -> new OldTaxAlgorithm();
+            case NEW -> new NewTaxAlgorithm();
+        };
     }
 }
