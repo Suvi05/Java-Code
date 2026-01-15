@@ -16,5 +16,8 @@ public class Client {
             //Using Profiler we can see the amount of memory used by both the techniques.
         }
         System.out.println("DONE");
+        System.out.println("DONE - waiting...");
+        new java.util.Scanner(System.in).nextLine();
+        //👉 Program tab tak alive rahega jab tak tu Enter nahi dabata
     }
 }

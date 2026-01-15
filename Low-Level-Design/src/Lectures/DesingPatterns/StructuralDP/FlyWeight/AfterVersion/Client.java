@@ -31,5 +31,8 @@ public class Client {
             //Adding Flying bullet objects into RAM(Array)
         }
         System.out.println("DONE");
+        System.out.println("DONE - waiting...");
+        new java.util.Scanner(System.in).nextLine();
+        //👉 Program tab tak alive rahega jab tak tu Enter nahi dabata
     }
 }
