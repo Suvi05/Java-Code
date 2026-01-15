@@ -9,3 +9,4 @@ public class TaxCalculator {
                 .calculateTax(salaryDetails);
     }
 }
+//Now this file is redundant
