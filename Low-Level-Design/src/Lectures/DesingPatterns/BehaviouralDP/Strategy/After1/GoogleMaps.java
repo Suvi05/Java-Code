@@ -5,6 +5,10 @@ public class GoogleMaps {
 
     private PathCalculationStrategyFactory pathCalculationStrategyFactory;
 
+    public GoogleMaps(PathCalculationStrategyFactory factory) {
+        this.pathCalculationStrategyFactory = factory;
+    }
+
     public void findPath(String from, String to, TransportMode mode) {
         //Finding "Path Calculation Method/Class" of provided "Transport Mode":
         //Strategy' Interface--Interface ka ref variable-----Obj reference of Factory--Method from Factory
