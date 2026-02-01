@@ -12,6 +12,7 @@ public class MultiThreaded extends Thread {
         }
         long end = System.currentTimeMillis();
         long timetaken = end - start;
+        System.out.println();
         System.out.println("Total Time Taken :" + (timetaken / 1000) + " seconds ");
     }
 
@@ -21,7 +22,7 @@ public class MultiThreaded extends Thread {
             try {
                 Thread.sleep(10);
             } catch (InterruptedException e) {
-                System.out.println("Error occured in Sleep Method");
+                System.out.println("Error occurred in Sleep Method");
             }
         }
     }
