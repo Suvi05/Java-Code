@@ -1,7 +1,6 @@
-package LLDProjects.MyPenDesign;
+package LLDProjects.PenDesign.MyPenDesign;
 
-import LLDProjects.MyPenDesign.Strategy.RoughWriting;
-import LLDProjects.MyPenDesign.Strategy.WritingStrategy;
+import LLDProjects.PenDesign.MyPenDesign.Strategy.WritingStrategy;
 
 public class BallPen extends Pen implements Refill {
     public BallPen(WritingStrategy writingStrategy) {

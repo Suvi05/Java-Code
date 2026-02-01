@@ -1,8 +1,7 @@
-package LLDProjects.MyPenDesign;
+package LLDProjects.PenDesign.MyPenDesign;
 
-import LLDProjects.MyPenDesign.Strategy.RoughWriting;
-import LLDProjects.MyPenDesign.Strategy.SmoothWriting;
-import LLDProjects.MyPenDesign.Strategy.WritingStrategy;
+import LLDProjects.PenDesign.MyPenDesign.Strategy.RoughWriting;
+import LLDProjects.PenDesign.MyPenDesign.Strategy.SmoothWriting;
 
 public class PenFactory {
     static public Pen createPen(Type type) {

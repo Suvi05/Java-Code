@@ -1,4 +1,4 @@
-package LLDProjects.MyPenDesign.Strategy;
+package LLDProjects.PenDesign.MyPenDesign.Strategy;
 
 public class SmoothWriting implements WritingStrategy{
     @Override

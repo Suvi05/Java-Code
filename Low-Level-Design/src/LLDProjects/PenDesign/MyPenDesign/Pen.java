@@ -1,6 +1,6 @@
-package LLDProjects.MyPenDesign;
+package LLDProjects.PenDesign.MyPenDesign;
 
-import LLDProjects.MyPenDesign.Strategy.WritingStrategy;
+import LLDProjects.PenDesign.MyPenDesign.Strategy.WritingStrategy;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,7 +1,6 @@
-package LLDProjects.PenDesign;
+package LLDProjects.PenDesign.ScalerPenDesign;
 
-import LLDProjects.PenDesign.Strategies.WriteStrategies.SmoothWriteBehaviour;
-import LLDProjects.PenDesign.Strategies.WriteStrategies.WriteBehaviour;
+import LLDProjects.PenDesign.ScalerPenDesign.Strategies.WriteStrategies.WriteBehaviour;
 
 public abstract class Pen {
     private String name;

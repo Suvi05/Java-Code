@@ -1,6 +1,6 @@
-package LLDProjects.MyPenDesign;
+package LLDProjects.PenDesign.MyPenDesign;
 
-import LLDProjects.MyPenDesign.Strategy.WritingStrategy;
+import LLDProjects.PenDesign.MyPenDesign.Strategy.WritingStrategy;
 
 public class GelPen extends Pen implements Refill {
 

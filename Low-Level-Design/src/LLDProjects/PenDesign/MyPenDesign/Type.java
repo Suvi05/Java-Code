@@ -1,4 +1,4 @@
-package LLDProjects.MyPenDesign;
+package LLDProjects.PenDesign.MyPenDesign;
 
 public enum Type {
     BALL,

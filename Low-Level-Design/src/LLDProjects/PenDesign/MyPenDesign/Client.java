@@ -1,4 +1,4 @@
-package LLDProjects.MyPenDesign;
+package LLDProjects.PenDesign.MyPenDesign;
 
 public class Client {
     public static void main(String[] args) {

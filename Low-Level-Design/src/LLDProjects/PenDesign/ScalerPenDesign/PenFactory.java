@@ -1,4 +1,4 @@
-package LLDProjects.PenDesign;
+package LLDProjects.PenDesign.ScalerPenDesign;
 //Builder is build in the class but not the Factory, it is always a new Class
 public class PenFactory {
 

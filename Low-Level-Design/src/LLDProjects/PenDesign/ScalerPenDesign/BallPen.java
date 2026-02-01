@@ -1,6 +1,6 @@
-package LLDProjects.PenDesign;
+package LLDProjects.PenDesign.ScalerPenDesign;
 
-import LLDProjects.PenDesign.Strategies.WriteStrategies.WriteBehaviour;
+import LLDProjects.PenDesign.ScalerPenDesign.Strategies.WriteStrategies.WriteBehaviour;
 
 public class BallPen extends Pen implements RefillPen {
 
