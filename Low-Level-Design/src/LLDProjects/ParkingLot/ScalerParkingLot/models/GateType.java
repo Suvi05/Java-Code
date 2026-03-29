@@ -1,4 +1,6 @@
 package LLDProjects.ParkingLot.ScalerParkingLot.models;
 
-public class GateType {
+public enum GateType {
+    ENTRY,
+    EXIT,
 }

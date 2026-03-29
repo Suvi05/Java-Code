@@ -1,4 +1,4 @@
 package LLDProjects.ParkingLot.ScalerParkingLot.models;
 
-public class Operator {
+public class Operator extends BaseModel {
 }

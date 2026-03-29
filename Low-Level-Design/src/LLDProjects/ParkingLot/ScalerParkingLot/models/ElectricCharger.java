@@ -1,4 +1,4 @@
 package LLDProjects.ParkingLot.ScalerParkingLot.models;
 
-public class ElectricCharger {
+public class ElectricCharger extends BaseModel{
 }

@@ -1,4 +1,12 @@
 package LLDProjects.ParkingLot.ScalerParkingLot.models;
 
-public class Invoice {
+import java.util.Date;
+
+public class Invoice extends BaseModel {
+    private Ticket ticket;
+    private double amount;
+    private Date exitTime;
+    private Operator operator;
+    private InvoicePaidStatus invoicePaidStatus;
+
 }
